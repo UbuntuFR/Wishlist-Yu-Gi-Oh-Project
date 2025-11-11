@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Wishlist Yu-Gi-Oh! 🎴</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎴 Ma Wishlist Yu-Gi-Oh! 🎴</h1>
+            <p class="subtitle">Mes cartes à collectionner</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Chercher une carte..." 
+                    class="search-input"
+                >
+            </div>
+
+            <div class="add-card-form">
+                <input 
+                    type="text" 
+                    id="cardName" 
+                    placeholder="Nom de la carte" 
+                    class="input-field"
+                >
+                <input 
+                    type="text" 
+                    id="cardRef" 
+                    placeholder="Référence" 
+                    class="input-field"
+                >
+                <input 
+                    type="text" 
+                    id="cardRarity" 
+                    placeholder="Rareté (ex: Ultra Rare)" 
+                    class="input-field"
+                >
+                <button id="addBtn" class="btn btn-add">Ajouter</button>
+            </div>
+
+            <div class="sort-controls">
+                <button class="btn btn-sort" data-sort="name">Trier par Nom A-Z</button>
+                <button class="btn btn-sort" data-sort="rarity">Trier par Rareté</button>
+                <button class="btn btn-sort" data-sort="ref">Trier par Référence</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <p>Total cartes: <strong id="cardCount">0</strong></p>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="cards-table">
+                <thead>
+                    <tr>
+                        <th>Nom de la carte</th>
+                        <th>Référence</th>
+                        <th>Rareté</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cardsTable">
+                    <!-- Les cartes vont s'afficher ici -->
+                </tbody>
+            </table>
+            <div id="emptyMessage" class="empty-message">
+                📋 Aucune carte pour le moment. Ajoute ta première carte !
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
